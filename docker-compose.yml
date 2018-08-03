@@ -3,9 +3,10 @@ services:
   webserver:
     build:
       context: ./.docker/nginx-php
-    container_name: webserver
+      dockerfile: Dockerfilelatest
+    container_name: webserver 
     ports:
-      - "80:80"
+      - "8072:80"
     volumes:
       - ./storage/logs/nginx/:/var/log/nginx
       - ./config/sites/:/etc/nginx/sites-enabled/
@@ -14,10 +15,10 @@ services:
   webserver71:
     build:
       context: ./.docker/nginx-php
-      dockerfile: Dockerfile71
+      dockerfile: Dockerfile71xdebug
     container_name: webserver71  
     ports:
-      - "81:80"
+      - "80:80"
     volumes:
       - ./storage/logs/nginx/:/var/log/nginx
       - ./config/sites/:/etc/nginx/sites-enabled/
