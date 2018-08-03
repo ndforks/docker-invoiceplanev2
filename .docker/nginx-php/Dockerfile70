@@ -4,5 +4,5 @@ LABEL MAINTAINER="Amrit G.C. <music.demand01@gmail.com>"
 
 WORKDIR /var/www/
 
-EXPOSE 80
+EXPOSE 8070
 CMD service php7.0-fpm start && nginx
